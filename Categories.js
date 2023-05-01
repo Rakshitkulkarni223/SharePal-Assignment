@@ -89,7 +89,7 @@ const Item = ({ id, uri, title, gotoItem }) => (
         bottom: scale(0),
         width: scale(120),
         height: scale(80),
-        borderRadius: scale(300),
+        borderRadius: scale(50),
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
         backgroundColor: '#d7df23',
@@ -147,7 +147,7 @@ const HeaderComponent = () => {
           width: Dimensions.get('window').width,
           height: scale(150),
           top: scale(130),
-          borderRadius: scale(300),
+          borderRadius: scale(130),
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
           backgroundColor: '#d7df23',
@@ -517,6 +517,7 @@ const Categories = () => {
       {gotoid === -1 ? <FlatList
         key={'_'}
         data={allitems}
+        columnWrapperStyle={{justifyContent:'center', }}
         keyExtractor={(item) => item.id}
         numColumns={numColumns}
         renderItem={renderItem}

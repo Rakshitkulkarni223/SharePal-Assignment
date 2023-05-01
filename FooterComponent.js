@@ -1,4 +1,4 @@
-import { View, Text, FlatList, StyleSheet, ImageBackground, Image, Dimensions } from 'react-native'
+import { View, Text, FlatList, StyleSheet, ImageBackground, Image, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
 import { scale, verticalScale } from './Dimensions'
 import { normalize } from './FontResize'
@@ -237,7 +237,6 @@ const Item = ({ id, uri, title, subtitle }) => (
             height: scale(180),
             elevation: scale(2),
             marginHorizontal: scale(10),
-            marginRight: scale(2)
         }}>
             <View style={{
                 flex: 1,
@@ -345,14 +344,14 @@ const ItemFooter = ({ id, uri, title, subtitle }) => (
                 <View style={{
                     flexDirection: 'row',
                     justifyContent: 'center'
-                }}> 
+                }}>
                     <Image style={{
-                    width: scale(45),
-                    height: scale(45),
-                    resizeMode: 'contain'
-                }} source={checkImage(id)} />
+                        width: scale(45),
+                        height: scale(45),
+                        resizeMode: 'contain'
+                    }} source={checkImage(id)} />
                 </View>
-            
+
 
             </View>
 
@@ -375,20 +374,20 @@ const ItemFooter = ({ id, uri, title, subtitle }) => (
                         {title}
                     </Text>
                     <View style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center'
-                }}>
-                    <Text style={{
-                        textAlign: 'center',
-                        marginBottom: verticalScale(10),
-                        paddingRight: scale(10),
-                        fontSize: normalize(10),
-                        fontWeight: '200',
-                        letterSpacing: scale(0.5),
+                        flexDirection: 'row',
+                        justifyContent: 'center'
                     }}>
-                        {/* {subtitle} */}
-                    </Text>
-                </View>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginBottom: verticalScale(10),
+                            paddingRight: scale(10),
+                            fontSize: normalize(10),
+                            fontWeight: '200',
+                            letterSpacing: scale(0.5),
+                        }}>
+                            {/* {subtitle} */}
+                        </Text>
+                    </View>
                 </View>
                 <View style={{
                     flexDirection: 'row',
@@ -405,22 +404,22 @@ const ItemFooter = ({ id, uri, title, subtitle }) => (
                         {subtitle}
                     </Text>
                     <View style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center'
-                }}>
-                    <Text style={{
-                        textAlign: 'center',
-                        marginBottom: verticalScale(10),
-                        paddingRight: scale(10),
-                        fontSize: normalize(10),
-                        fontWeight: '200',
-                        letterSpacing: scale(0.5),
+                        flexDirection: 'row',
+                        justifyContent: 'center'
                     }}>
-                        {/* {subtitle} */}
-                    </Text>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginBottom: verticalScale(10),
+                            paddingRight: scale(10),
+                            fontSize: normalize(10),
+                            fontWeight: '200',
+                            letterSpacing: scale(0.5),
+                        }}>
+                            {/* {subtitle} */}
+                        </Text>
+                    </View>
                 </View>
-                </View>
-                
+
 
 
             </View>
